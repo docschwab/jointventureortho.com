@@ -1,0 +1,610 @@
+/* ============================================================================
+   JVO Website — CSS Custom Properties
+   Change these variables to reskin the entire site.
+   ============================================================================ */
+
+:root {
+  /* JVO Brand Colors (placeholder — designer will update) */
+  --jvo-primary: #1a2332;         /* Deep navy */
+  --jvo-secondary: #2d8a8a;       /* Teal */
+  --jvo-accent: #e8915a;          /* Warm amber */
+  --jvo-bg: #f8f9fa;              /* Light background */
+  --jvo-bg-alt: #ffffff;          /* Card background */
+  --jvo-text: #2c3e50;            /* Body text */
+  --jvo-text-light: #6c757d;      /* Secondary text */
+  --jvo-border: #e2e8f0;          /* Borders */
+
+  /* OrthoDigest Brand Colors */
+  --od-primary: #0d1b2a;          /* Deep navy */
+  --od-secondary: #1b9aaa;        /* Teal */
+  --od-accent: #e07a5f;           /* Coral accent */
+  --od-bg: #f0f4f8;
+
+  /* Subspecialty Colors */
+  --color-hip: #2d8a8a;
+  --color-knee: #3a7bd5;
+  --color-shoulder: #6c5ce7;
+  --color-foot: #e07a5f;
+  --color-hand: #00b894;
+  --color-trauma: #d63031;
+  --color-sports: #fdcb6e;
+
+  /* Typography */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --nav-height: 64px;
+  --border-radius: 8px;
+}
+
+/* ============================================================================
+   RESET & BASE
+   ============================================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--jvo-text);
+  background: var(--jvo-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--jvo-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--jvo-accent);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================================
+   NAVIGATION
+   ============================================================================ */
+
+.nav {
+  background: var(--jvo-primary);
+  height: var(--nav-height);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nav-logo span {
+  color: var(--jvo-secondary);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ============================================================================
+   LAYOUT
+   ============================================================================ */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--jvo-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.section-header p {
+  color: var(--jvo-text-light);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+}
+
+/* ============================================================================
+   HERO
+   ============================================================================ */
+
+.hero {
+  background: linear-gradient(135deg, var(--jvo-primary) 0%, #2a3f5f 100%);
+  color: white;
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-md);
+}
+
+.hero h1 strong {
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  max-width: 650px;
+  margin: 0 auto var(--space-lg);
+  line-height: 1.7;
+}
+
+/* ============================================================================
+   PROJECT CARDS
+   ============================================================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-lg);
+}
+
+.project-card {
+  background: var(--jvo-bg-alt);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-banner {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.project-card-banner.orthodigest {
+  background: linear-gradient(135deg, var(--od-primary) 0%, #1b3a4b 100%);
+}
+
+.project-card-banner.the-joint-venture {
+  background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+}
+
+.project-card-banner h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.project-card-banner .badge {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-card-body {
+  padding: var(--space-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-body p {
+  color: var(--jvo-text-light);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-md);
+  flex: 1;
+}
+
+.project-card-body .btn {
+  align-self: flex-start;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--jvo-secondary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #247676;
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--jvo-secondary);
+  color: var(--jvo-secondary);
+}
+
+.btn-outline:hover {
+  background: var(--jvo-secondary);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+/* ============================================================================
+   ORTHODIGEST EPISODE BROWSER
+   ============================================================================ */
+
+.od-hero {
+  background: linear-gradient(135deg, var(--od-primary) 0%, #1b3a4b 100%);
+  color: white;
+  padding: var(--space-xl) 0;
+}
+
+.od-hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+.od-hero p {
+  opacity: 0.85;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-top: var(--space-md);
+}
+
+.subscribe-bar {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-lg);
+}
+
+.subscribe-bar a {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.subscribe-bar a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* Filter tabs */
+.filter-bar {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  padding: var(--space-lg) 0 var(--space-md);
+}
+
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 2px solid var(--jvo-border);
+  background: var(--jvo-bg-alt);
+  color: var(--jvo-text-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--jvo-secondary);
+  color: var(--jvo-secondary);
+}
+
+.filter-btn.active {
+  background: var(--jvo-secondary);
+  border-color: var(--jvo-secondary);
+  color: white;
+}
+
+.filter-btn[data-sub="Hip"].active { background: var(--color-hip); border-color: var(--color-hip); }
+.filter-btn[data-sub="Knee"].active { background: var(--color-knee); border-color: var(--color-knee); }
+.filter-btn[data-sub="Shoulder & Elbow"].active { background: var(--color-shoulder); border-color: var(--color-shoulder); }
+.filter-btn[data-sub="Foot & Ankle"].active { background: var(--color-foot); border-color: var(--color-foot); }
+.filter-btn[data-sub="Hand"].active { background: var(--color-hand); border-color: var(--color-hand); }
+.filter-btn[data-sub="Trauma"].active { background: var(--color-trauma); border-color: var(--color-trauma); }
+.filter-btn[data-sub="Sports Medicine"].active { background: var(--color-sports); border-color: var(--color-sports); }
+
+/* Episode cards */
+.episodes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.episode-card {
+  background: var(--jvo-bg-alt);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid var(--jvo-border);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.episode-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.episode-card[data-sub="Hip"] { border-left-color: var(--color-hip); }
+.episode-card[data-sub="Knee"] { border-left-color: var(--color-knee); }
+.episode-card[data-sub="Shoulder & Elbow"] { border-left-color: var(--color-shoulder); }
+.episode-card[data-sub="Foot & Ankle"] { border-left-color: var(--color-foot); }
+.episode-card[data-sub="Hand"] { border-left-color: var(--color-hand); }
+.episode-card[data-sub="Trauma"] { border-left-color: var(--color-trauma); }
+.episode-card[data-sub="Sports Medicine"] { border-left-color: var(--color-sports); }
+
+.episode-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.episode-card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--jvo-primary);
+}
+
+.episode-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  color: white;
+  white-space: nowrap;
+}
+
+.episode-tag[data-sub="Hip"] { background: var(--color-hip); }
+.episode-tag[data-sub="Knee"] { background: var(--color-knee); }
+.episode-tag[data-sub="Shoulder & Elbow"] { background: var(--color-shoulder); }
+.episode-tag[data-sub="Foot & Ankle"] { background: var(--color-foot); }
+.episode-tag[data-sub="Hand"] { background: var(--color-hand); }
+.episode-tag[data-sub="Trauma"] { background: var(--color-trauma); }
+.episode-tag[data-sub="Sports Medicine"] { background: var(--color-sports); color: #2d3436; }
+
+.episode-card-meta {
+  font-size: 0.85rem;
+  color: var(--jvo-text-light);
+  margin-bottom: var(--space-sm);
+}
+
+.episode-card-description {
+  font-size: 0.9rem;
+  color: var(--jvo-text);
+  display: none;
+}
+
+.episode-card.expanded .episode-card-description {
+  display: block;
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--jvo-border);
+}
+
+.manuscript-list {
+  list-style: none;
+  margin-top: var(--space-sm);
+}
+
+.manuscript-list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--jvo-border);
+  font-size: 0.85rem;
+}
+
+.manuscript-list li:last-child {
+  border-bottom: none;
+}
+
+.manuscript-list a {
+  font-size: 0.8rem;
+  color: var(--od-secondary);
+}
+
+.episode-player {
+  margin-top: var(--space-md);
+}
+
+.episode-player audio {
+  width: 100%;
+  height: 40px;
+}
+
+/* ============================================================================
+   FOOTER
+   ============================================================================ */
+
+.footer {
+  background: var(--jvo-primary);
+  color: rgba(255, 255, 255, 0.6);
+  padding: var(--space-lg) 0;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--jvo-primary);
+    flex-direction: column;
+    padding: var(--space-md) var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .filter-bar {
+    justify-content: center;
+  }
+
+  .episode-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrthoDigest — Daily Orthopaedic Research Podcast | Joint Venture Orthopaedics</title>
+  <meta name="description" content="OrthoDigest summarizes six open-access orthopaedic manuscripts daily, covering seven subspecialties across the week. Available in 11 languages.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Joint Venture <span>Orthopaedics</span></a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/orthodigest/" class="active">OrthoDigest</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- OrthoDigest Hero -->
+    <section class="od-hero">
+      <div class="container">
+        <h1>OrthoDigest</h1>
+        <p>A daily AI-generated podcast summarizing open-access orthopaedic research. Six peer-reviewed manuscripts per episode, seven subspecialties across the week, available in 11 languages. All manuscripts are open access — links in every episode description.</p>
+
+        <div class="subscribe-bar">
+          <a href="https://feeds.transistor.fm/orthodigest" target="_blank">RSS Feed</a>
+          <a href="https://podcasts.apple.com" target="_blank">Apple Podcasts</a>
+          <a href="https://spotify.com" target="_blank">Spotify</a>
+          <a href="https://music.amazon.com" target="_blank">Amazon Music</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Episode Browser -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Subspecialty Filters -->
+        <div class="filter-bar" id="filterBar">
+          <button class="filter-btn active" data-sub="all">All</button>
+          <button class="filter-btn" data-sub="Hip">Hip</button>
+          <button class="filter-btn" data-sub="Knee">Knee</button>
+          <button class="filter-btn" data-sub="Shoulder & Elbow">Shoulder & Elbow</button>
+          <button class="filter-btn" data-sub="Foot & Ankle">Foot & Ankle</button>
+          <button class="filter-btn" data-sub="Hand">Hand</button>
+          <button class="filter-btn" data-sub="Trauma">Trauma</button>
+          <button class="filter-btn" data-sub="Sports Medicine">Sports Medicine</button>
+        </div>
+
+        <!-- Search -->
+        <div style="margin-bottom: var(--space-lg);">
+          <input type="text" id="searchInput" placeholder="Search episodes by title, author, or keyword..."
+                 style="width: 100%; padding: 0.7rem 1rem; border: 2px solid var(--jvo-border); border-radius: var(--border-radius); font-size: 0.95rem; font-family: var(--font-body);">
+        </div>
+
+        <!-- Episodes Container -->
+        <div class="episodes-grid" id="episodesGrid">
+          <p style="text-align: center; color: var(--jvo-text-light); padding: var(--space-xl) 0;">Loading episodes...</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Weekly Rotation Info -->
+    <section class="section" style="background: var(--jvo-bg-alt);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Weekly Rotation</h2>
+          <p>One subspecialty per day, covering the full breadth of orthopaedic surgery every week.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: var(--space-md); text-align: center;">
+          <div><strong>Monday</strong><br><span class="episode-tag" data-sub="Hip" style="display: inline-block; margin-top: 0.3rem;">Hip</span></div>
+          <div><strong>Tuesday</strong><br><span class="episode-tag" data-sub="Knee" style="display: inline-block; margin-top: 0.3rem;">Knee</span></div>
+          <div><strong>Wednesday</strong><br><span class="episode-tag" data-sub="Shoulder & Elbow" style="display: inline-block; margin-top: 0.3rem;">Shoulder & Elbow</span></div>
+          <div><strong>Thursday</strong><br><span class="episode-tag" data-sub="Foot & Ankle" style="display: inline-block; margin-top: 0.3rem;">Foot & Ankle</span></div>
+          <div><strong>Friday</strong><br><span class="episode-tag" data-sub="Hand" style="display: inline-block; margin-top: 0.3rem;">Hand</span></div>
+          <div><strong>Saturday</strong><br><span class="episode-tag" data-sub="Trauma" style="display: inline-block; margin-top: 0.3rem;">Trauma</span></div>
+          <div><strong>Sunday</strong><br><span class="episode-tag" data-sub="Sports Medicine" style="display: inline-block; margin-top: 0.3rem;">Sports Medicine</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Joint Venture Orthopaedics. All rights reserved.</span>
+      <a href="mailto:contact@jointventureortho.com">contact@jointventureortho.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/episodes.js"></script>
+
+</body>
+</html>
