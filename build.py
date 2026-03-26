@@ -99,17 +99,55 @@ def parse_episode(ep):
     # Parse manuscripts from description HTML
     manuscripts = []
     desc_html = ep.get("description_html", "")
-    # Pattern: N. "Title" — Author et al., Journal — DOI link
-    for match in re.finditer(
-        r'\d+\.\s*"([^"]+)"\s*[—–-]\s*(\S+(?:\s+\S+)?)\s+et\s+al\.,\s*(.+?)\s*[—–-]\s*(?:<a[^>]*>)?https?://doi\.org/(\S+?)(?:</a>|[<\s])',
-        desc_html,
-    ):
-        manuscripts.append({
-            "title": match.group(1),
-            "author": match.group(2),
-            "journal": match.group(3),
-            "doi": match.group(4).rstrip('"<'),
-        })
+
+    # Normalize HTML entities and curly quotes
+    normalized = desc_html.replace("&#x201C;", '"').replace("&#x201D;", '"')
+    normalized = normalized.replace("\u201c", '"').replace("\u201d", '"')
+    normalized = normalized.replace("&#x2014;", "—").replace("&#x2013;", "—")
+    normalized = normalized.replace("\u2014", "—").replace("\u2013", "—")
+
+    # Strategy 1: Parse <li> items containing manuscript citations
+    for li_match in re.finditer(r'<li>(.*?)</li>', normalized, re.DOTALL):
+        li_text = li_match.group(1).strip()
+        # Strip remaining HTML tags for matching
+        li_clean = re.sub(r'<[^>]+>', '', li_text)
+        # Extract: "Title" — Author et al., Journal — DOI URL
+        ms_match = re.match(
+            r'["\u201c](.+?)["\u201d]\s*[—–-]+\s*(\S+(?:\s+\S+)?)\s+et\s+al\.,\s*(.+?)\s*[—–-]+\s*https?://doi\.org/(\S+)',
+            li_clean,
+        )
+        if ms_match:
+            manuscripts.append({
+                "title": ms_match.group(1).strip(),
+                "author": ms_match.group(2).strip(),
+                "journal": ms_match.group(3).strip(),
+                "doi": ms_match.group(4).strip().rstrip('.,;)'),
+            })
+            continue
+        # Fallback: try extracting DOI from the HTML version (with <a> tags)
+        doi_match = re.search(r'doi\.org/([^\s<"]+)', li_text)
+        title_match = re.match(r'["\u201c](.+?)["\u201d]', li_clean)
+        author_match = re.search(r'[—–-]\s*(\S+(?:\s+\S+)?)\s+et\s+al\.', li_clean)
+        if title_match:
+            manuscripts.append({
+                "title": title_match.group(1).strip(),
+                "author": author_match.group(1).strip() if author_match else "",
+                "journal": "",
+                "doi": doi_match.group(1).strip().rstrip('.,;)') if doi_match else "",
+            })
+
+    # Strategy 2: If no <li> items found, try plain-text numbered list
+    if not manuscripts:
+        for match in re.finditer(
+            r'\d+\.\s*"([^"]+)"\s*[—–-]\s*(\S+(?:\s+\S+)?)\s+et\s+al\.,\s*(.+?)\s*[—–-]\s*https?://doi\.org/(\S+)',
+            normalized,
+        ):
+            manuscripts.append({
+                "title": match.group(1),
+                "author": match.group(2),
+                "journal": match.group(3),
+                "doi": match.group(4).rstrip('"<.,;)'),
+            })
 
     # Clean description to plain text summary
     desc_text = re.sub(r"<[^>]+>", "", desc_html)
