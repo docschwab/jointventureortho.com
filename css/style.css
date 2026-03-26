@@ -531,6 +531,28 @@ main {
   height: 40px;
 }
 
+/* Scheduled / Coming Soon episodes */
+.episode-card.scheduled {
+  opacity: 0.75;
+  border-left-style: dashed;
+}
+
+.episode-card.scheduled:hover {
+  opacity: 0.9;
+}
+
+.coming-soon-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  background: var(--jvo-accent);
+  color: white;
+  white-space: nowrap;
+}
+
 /* ============================================================================
    FOOTER
    ============================================================================ */

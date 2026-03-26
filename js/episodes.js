@@ -48,18 +48,29 @@ function renderEpisodes(episodes) {
     return;
   }
 
-  grid.innerHTML = episodes.map(ep => `
-    <div class="episode-card" data-sub="${ep.subspecialty}" onclick="this.classList.toggle('expanded')">
+  grid.innerHTML = episodes.map(ep => {
+    const isScheduled = ep.status === 'scheduled';
+    const scheduledDate = isScheduled && ep.published_at
+      ? new Date(ep.published_at).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })
+      : '';
+
+    return `
+    <div class="episode-card ${isScheduled ? 'scheduled' : ''}" data-sub="${ep.subspecialty}" onclick="this.classList.toggle('expanded')">
       <div class="episode-card-header">
         <h3>${ep.title}</h3>
-        <span class="episode-tag" data-sub="${ep.subspecialty}">${ep.subspecialty}</span>
+        <div style="display: flex; gap: 0.4rem; align-items: center;">
+          ${isScheduled ? '<span class="coming-soon-badge">Coming Soon</span>' : ''}
+          <span class="episode-tag" data-sub="${ep.subspecialty}">${ep.subspecialty}</span>
+        </div>
       </div>
       <div class="episode-card-meta">
-        Vol. ${ep.volume}, Issue ${ep.issue} &middot; ${ep.duration || ''} &middot; ${ep.manuscript_count || 6} manuscripts
+        Vol. ${ep.volume}, Issue ${ep.issue}
+        ${isScheduled ? ` &middot; Releases ${scheduledDate}` : ` &middot; ${ep.duration || ''}`}
+        &middot; ${ep.manuscript_count || 6} manuscripts
       </div>
       <div class="episode-card-description">
         ${ep.description || ''}
-        ${ep.manuscripts ? `
+        ${ep.manuscripts && ep.manuscripts.length ? `
           <ul class="manuscript-list">
             ${ep.manuscripts.map(ms => `
               <li>
@@ -69,14 +80,15 @@ function renderEpisodes(episodes) {
             `).join('')}
           </ul>
         ` : ''}
-        ${ep.share_url ? `
+        ${!isScheduled && ep.media_url ? `
           <div class="episode-player">
             <audio controls preload="none" src="${ep.media_url}"></audio>
           </div>
         ` : ''}
+        ${isScheduled ? `<p style="color: var(--jvo-text-light); font-style: italic; margin-top: var(--space-md);">Audio will be available on ${scheduledDate}.</p>` : ''}
       </div>
-    </div>
-  `).join('');
+    </div>`;
+  }).join('');
 }
 
 /**

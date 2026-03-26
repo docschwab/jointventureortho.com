@@ -162,6 +162,7 @@ def parse_episode(ep):
         "subspecialty": subspecialty,
         "volume": volume,
         "issue": issue,
+        "status": ep.get("status", "published"),
         "description": desc_text,
         "manuscripts": manuscripts,
         "manuscript_count": len(manuscripts) or 6,
@@ -183,10 +184,16 @@ def build():
     print(f"  Found {len(raw_episodes)} episodes")
 
     # Parse and sort by episode number (descending — newest first)
-    episodes = [parse_episode(ep) for ep in raw_episodes if ep.get("status") == "published"]
+    # Include both published and scheduled episodes (exclude drafts)
+    episodes = [
+        parse_episode(ep) for ep in raw_episodes
+        if ep.get("status") in ("published", "scheduled")
+    ]
     episodes.sort(key=lambda e: e["number"], reverse=True)
 
-    print(f"  {len(episodes)} published episodes")
+    published = sum(1 for e in episodes if e["status"] == "published")
+    scheduled = sum(1 for e in episodes if e["status"] == "scheduled")
+    print(f"  {published} published, {scheduled} scheduled ({len(episodes)} total)")
 
     # Write static JSON
     data_dir = os.path.join(SITE_DIR, "data")
