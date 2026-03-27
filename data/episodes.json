@@ -1,5 +1,376 @@
 [
   {
+    "id": "3123562",
+    "number": 63,
+    "title": "Episode 63: Sports Medicine Edition — Vol. 1, Issue 9 (2026-04-12)",
+    "subspecialty": "Sports Medicine",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today's sports medicine edition covers six key studies spanning shoulder instability and ACL reconstruction. We examine whether the critical shoulder angle can predict rotator cuff tears after anterior dislocations, explore muscle advancement techniques for large cuff tears, and discuss quadriceps tendon grafts for revision ACL surgery. We also cover combined ACL-ALL reconstruction in skeletally immature patients, compare MRI and CT for measuring bony shoulder parameters, and investigate long-term tunnel enlargement patterns after ACL reconstruction.",
+    "manuscripts": [
+      {
+        "title": "Are Rotator Cuff Tears in Anterior Shoulder Dislocation Associated With a High Critical Shoulder Angle? A Retrospective Analysis",
+        "author": "Aldarragi",
+        "journal": "Cureus",
+        "doi": "10.7759/cureus.103974"
+      },
+      {
+        "title": "Clinical outcomes of muscle advancement technique for arthroscopic rotator cuff repair: comparison between cases with and without subscapularis tendon tear",
+        "author": "Okubo",
+        "journal": "JSES Int",
+        "doi": "10.1177/2325967120975754"
+      },
+      {
+        "title": "Revision Anterior Cruciate Ligament Reconstruction Using an Autogenous Quadriceps Tendon Graft Is Associated With Substantial Improvement in Patient-Reported Outcomes",
+        "author": "Rincón",
+        "journal": "J ISAKOS",
+        "doi": "10.1016/j.jisako.2026.101100"
+      },
+      {
+        "title": "Combined ACL and ALL anatomic reconstruction in skeletally immature patients: clinical outcomes and growth safety",
+        "author": "Behr",
+        "journal": "Orthop Traumatol Surg Res",
+        "doi": "10.1016/j.otsr.2026.104690"
+      },
+      {
+        "title": "MRI Provides CT-Equivalent Measurements of Glenoid Retroversion, Concavity, and BSSR After Anterior Shoulder Dislocation",
+        "author": "Zehnder",
+        "journal": "J Shoulder Elbow Surg",
+        "doi": "10.1016/j.jse.2026.03.004"
+      },
+      {
+        "title": "Mid-Term Tibial Tunnel Enlargement and Graft Maturation After ACL Reconstruction: A 5-Year Follow-Up Linking Morphological Dynamics to Knee Function",
+        "author": "Tang",
+        "journal": "Orthop Surg",
+        "doi": "10.1111/os.70287"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/96f49df0/c744d704.mp3",
+    "share_url": "https://share.transistor.fm/s/96f49df0",
+    "duration": "14:37",
+    "published_at": "2026-04-12T10:00:00.000Z"
+  },
+  {
+    "id": "3123561",
+    "number": 62,
+    "title": "Episode 62: Trauma Edition — Vol. 1, Issue 9 (2026-04-11)",
+    "subspecialty": "Trauma",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today's trauma edition covers imaging innovations, fracture management strategies across age groups, and evolving treatment paradigms. We examine cone-beam CT advantages for postoperative imaging, risk factors for mandibular fracture complications, titanium elastic nailing outcomes in pediatric tibial fractures, predictors of hardware removal, advances in bone cyst treatment, and surgical options for basicervical femur fractures.",
+    "manuscripts": [
+      {
+        "title": "Image quality and radiation dose of cone-beam CT versus multidetector CT for upper extremity osteosynthesis",
+        "author": "Gökduman",
+        "journal": "Scientific Reports",
+        "doi": "10.1136/bmj.k4931"
+      },
+      {
+        "title": "Risk Factors and Interventional Predictors for Postoperative Malunion and Nonunion in Adult Mandibular Fractures: A Scoping Review",
+        "author": "Tadepalli",
+        "journal": "Cureus",
+        "doi": "10.7759/cureus.103931"
+      },
+      {
+        "title": "Clinical and Radiological Outcomes of Titanium Elastic Intramedullary Nailing in Pediatric Tibial Shaft Fractures",
+        "author": "Khan",
+        "journal": "Cureus",
+        "doi": "10.7759/cureus.103885"
+      },
+      {
+        "title": "Predictors for complications and the removal of osteosynthesis material after mandibular fractures: a retrospective analysis",
+        "author": "Bigus",
+        "journal": "BMC Oral Health",
+        "doi": "10.1186/s12903-026-08112-0"
+      },
+      {
+        "title": "The best solution is the simplest: advances in surgical and minimally invasive management of aneurysmal and simple bone cysts",
+        "author": "Alaseem",
+        "journal": "Journal of Orthopaedic Surgery Research",
+        "doi": "10.1186/s13018-026-06792-6"
+      },
+      {
+        "title": "Surgical management of femur basicervical fractures (AO/OTA 31B3): A systematic review",
+        "author": "Cardinale",
+        "journal": "Orthopaedic Traumatology Surgery Research",
+        "doi": "10.1016/j.otsr.2026.104657"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/cee1f88f/f7782805.mp3",
+    "share_url": "https://share.transistor.fm/s/cee1f88f",
+    "duration": "14:27",
+    "published_at": "2026-04-11T10:00:00.000Z"
+  },
+  {
+    "id": "3123559",
+    "number": 61,
+    "title": "Episode 61: Hand Edition — Vol. 1, Issue 9 (2026-04-10)",
+    "subspecialty": "Hand",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today's hand surgery edition covers six studies spanning cost analysis, rare complications, surgical technique, new materials, biomechanics research, and training technology. We discuss moving carpal tunnel releases to office settings for cost savings, a case of digital artery pseudoaneurysm after collagenase injection, using isolated ulnar shortening osteotomy for combined ulnar impaction and DRUJ instability, radiolucent CFR-PEEK plates versus titanium for distal radius fractures, complex kinematics of opposite dart-throwing wrist motion, and validation of virtual reality simulators for surgical training.",
+    "manuscripts": [
+      {
+        "title": "A Cost Analysis of Carpal Tunnel Procedures Performed in an Office Procedure Room Versus a Hospital Operating Room in a Rural Midwest Health System",
+        "author": "Hurley",
+        "journal": "Plastic Surgery",
+        "doi": "10.1016/j.jhsa.2022.11.010"
+      },
+      {
+        "title": "Digital Artery Pseudoaneurysm After Collagenase Injection for Dupuytren Contracture: A Case Report",
+        "author": "Schwarz",
+        "journal": "Hand",
+        "doi": "10.1016/j.jham.2024.100117"
+      },
+      {
+        "title": "Clinical outcomes of isolated ulnar shortening osteotomy for ulnar impaction syndrome with concomitant distal radioulnar joint instability",
+        "author": "Gao",
+        "journal": "Journal of Plastic Surgery and Hand Surgery",
+        "doi": "10.2340/jphs.v61.45517"
+      },
+      {
+        "title": "Comparison of radiolucent CFR-PEEK and titanium volar locking plates in distal radius fracture fixation",
+        "author": "Huang",
+        "journal": "Journal of Orthopaedic Surgery",
+        "doi": "10.1177/10225536261434069"
+      },
+      {
+        "title": "Quantifying in vivo kinematics of the wrist during opposite dart-throwing motion: a 4D CT study",
+        "author": "Jia",
+        "journal": "Journal of Orthopaedic Surgery and Research",
+        "doi": "10.1186/s13018-026-06810-7"
+      },
+      {
+        "title": "Assessment of surgical skills on a novel expert-informed immersive virtual reality simulator for distal radius fracture fixation: a cross-sectional validation study",
+        "author": "Jacobsen",
+        "journal": "BMC Medical Education",
+        "doi": "10.1186/s12909-026-08983-5"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/552ffcf8/26d6ad7c.mp3",
+    "share_url": "https://share.transistor.fm/s/552ffcf8",
+    "duration": "14:36",
+    "published_at": "2026-04-10T10:00:00.000Z"
+  },
+  {
+    "id": "3123558",
+    "number": 60,
+    "title": "Episode 60: Foot & Ankle Edition — Vol. 1, Issue 9 (2026-04-09)",
+    "subspecialty": "Foot & Ankle",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today's foot and ankle edition covers six key studies spanning surgical techniques, perioperative management, and biomechanical analysis. We examine distal versus proximal metatarsal osteotomies for hallux valgus, analyze the impact of surgical timing on ankle fracture complications, review consensus guidelines for perioperative medication management, investigate patient compliance after foot surgery using GPS tracking, compare endoscopic and minimally invasive Achilles repair techniques, and explore plantar pressure changes in first metatarsophalangeal joint arthritis.",
+    "manuscripts": [
+      {
+        "title": "Performance of Distal and Proximal First Metatarsal Osteotomy in Hallux Valgus Surgery: A Systematic Review and Meta-Analysis",
+        "author": "Harahap",
+        "journal": "Orthop Rev (Pavia)",
+        "doi": "10.1186/s13018-024-05007-0"
+      },
+      {
+        "title": "Impact of surgical timing on wound complications following ankle fracture fixation: A 22-year retrospective cohort study",
+        "author": "Zahra",
+        "journal": "J Clin Orthop Trauma",
+        "doi": "10.1007/s00402-025-05896-8"
+      },
+      {
+        "title": "Clinical Consensus Statement: Perioperative Management of Prothrombotics, Antiplatelets, Anticoagulants, DMARDs and Biologics in Elective Podiatric Surgery",
+        "author": "Tang",
+        "journal": "J Foot Ankle Res",
+        "doi": "10.1002/jfa2.70121"
+      },
+      {
+        "title": "Early postoperative activity tracking shows excessive ambulation and poor adherence to recommendations after hallux valgus surgery",
+        "author": "Beldame",
+        "journal": "Orthop Traumatol Surg Res",
+        "doi": "10.1016/j.otsr.2026.104689"
+      },
+      {
+        "title": "All-inside endoscopic and minimally invasive modified Bunnell suture yield favourable outcomes in acute midsubstance Achilles tendon ruptures: a comparative study",
+        "author": "Xue",
+        "journal": "J Orthop Surg Res",
+        "doi": "10.1186/s13018-026-06769-5"
+      },
+      {
+        "title": "Effects of First Metatarsophalangeal Osteoarthritis on Plantar Pressures Across Multiple Activities",
+        "author": "Telfer",
+        "journal": "J Foot Ankle Res",
+        "doi": "10.1002/jfa2.70146"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/5838efed/42f3d075.mp3",
+    "share_url": "https://share.transistor.fm/s/5838efed",
+    "duration": "16:18",
+    "published_at": "2026-04-09T10:00:00.000Z"
+  },
+  {
+    "id": "3123557",
+    "number": 59,
+    "title": "Episode 59: Shoulder & Elbow Edition — Vol. 1, Issue 9 (2026-04-08)",
+    "subspecialty": "Shoulder & Elbow",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today's shoulder and elbow edition examines six key studies spanning arthroplasty decision-making, diagnostic techniques, and surgical innovations. We explore how surgeons choose between reverse and total shoulder arthroplasty, evaluate the critical shoulder angle as a screening tool, compare acute versus salvage distal humerus hemiarthroplasty, assess metabolic factors versus frailty in predicting complications, examine navigation technology in reverse arthroplasty, and review muscle advancement techniques for massive rotator cuff tears.",
+    "manuscripts": [
+      {
+        "title": "Osteoarthritis with an intact rotator cuff, reverse shoulder arthroplasty, or total shoulder arthroplasty? : a qualitative study of surgeon decision-making.",
+        "author": "O'Malley O",
+        "journal": "Bone Jt Open",
+        "doi": "10.1136/bmj-2023-075355"
+      },
+      {
+        "title": "Are Rotator Cuff Tears in Anterior Shoulder Dislocation Associated With a High Critical Shoulder Angle? A Retrospective Analysis.",
+        "author": "Aldarragi A",
+        "journal": "Cureus",
+        "doi": "10.7759/cureus.103974"
+      },
+      {
+        "title": "Functional outcomes and complications of distal humerus hemiarthroplasty performed in acute versus salvage cases: a systematic meta-analysis.",
+        "author": "Gosselin C",
+        "journal": "JSES Int",
+        "doi": "10.18637/jss.v036.i03"
+      },
+      {
+        "title": "Does pre-operative metabolic and nutritional assessment have greater association with perioperative complications than frailty following surgical intervention for proximal humerus fractures?",
+        "author": "Williamson TK",
+        "journal": "JSES Rev Rep Tech",
+        "doi": "10.1016/j.hcl.2023.05.009"
+      },
+      {
+        "title": "The role of intraoperative navigation in reverse total shoulder arthroplasty and its impact on clinical outcomes: a systematic review and meta-analysis.",
+        "author": "Brian A",
+        "journal": "JSES Rev Rep Tech",
+        "doi": "10.1016/j.jse.2023.05.021"
+      },
+      {
+        "title": "Clinical outcomes of muscle advancement technique for arthroscopic rotator cuff repair: comparison between cases with and without subscapularis tendon tear.",
+        "author": "Okubo A",
+        "journal": "JSES Int",
+        "doi": "10.1177/2325967120975754"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/7bb46342/463fffd4.mp3",
+    "share_url": "https://share.transistor.fm/s/7bb46342",
+    "duration": "16:49",
+    "published_at": "2026-04-08T10:00:00.000Z"
+  },
+  {
+    "id": "3123556",
+    "number": 58,
+    "title": "Episode 58: Knee Edition — Vol. 1, Issue 9 (2026-04-07)",
+    "subspecialty": "Knee",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today's knee edition covers six diverse studies addressing critical aspects of knee surgery and care. We explore DAIR success factors for periprosthetic infections, examine a promising nomogram for predicting neuropathic pain after TKA, review tourniquet-free surgical techniques, analyze robot-assisted outcomes using the Forgotten Joint Score, map the complete patient journey for TKA in China, and evaluate quadriceps tendon grafts for ACL revision surgery.",
+    "manuscripts": [
+      {
+        "title": "Review of Recent Advances in Managing Periprosthetic Joint Infection After Total Knee Arthroplasty: DAIR Technique",
+        "author": "Warda",
+        "journal": "Orthop Res Rev",
+        "doi": "10.1007/s00402-023-04891-1"
+      },
+      {
+        "title": "Prevalence and Nomogram-Based Prediction Model of Neuropathic Pain After Knee Arthroplasty",
+        "author": "Xin",
+        "journal": "J Pain Res",
+        "doi": "10.1002/advs.202205397"
+      },
+      {
+        "title": "Periarticular Vasoconstrictor Infiltration in a Tourniquet-Free Total Knee Arthroplasty: A Case Report of Effective Blood Loss Control in High-Thrombotic-Risk Patient",
+        "author": "Ranieri",
+        "journal": "Local Reg Anesth",
+        "doi": "10.1093/pm/pnz189"
+      },
+      {
+        "title": "Forgotten joint score one year after robot-assisted total knee arthroplasty",
+        "author": "Guerreiro",
+        "journal": "J Robot Surg",
+        "doi": "10.1007/s00167-023-07590-x"
+      },
+      {
+        "title": "Experience of patients with total knee arthroplasty for knee osteoarthritis in China: a patient journey map based on qualitative research",
+        "author": "Zhan",
+        "journal": "BMJ Open",
+        "doi": "10.1186/s12912-023-01409-3"
+      },
+      {
+        "title": "REVISION ANTERIOR CRUCIATE LIGAMENT RECONSTRUCTION USING AN AUTOGENOUS QUADRICEPS TENDON GRAFT IS ASSOCIATED WITH SUBSTANTIAL IMPROVEMENT IN PATIENT-REPORTED OUTCOMES",
+        "author": "Rincón",
+        "journal": "J ISAKOS",
+        "doi": "10.1016/j.jisako.2026.101100"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/b60934b5/63b7ac02.mp3",
+    "share_url": "https://share.transistor.fm/s/b60934b5",
+    "duration": "16:45",
+    "published_at": "2026-04-07T10:00:00.000Z"
+  },
+  {
+    "id": "3123555",
+    "number": 57,
+    "title": "Episode 57: Hip Edition — Vol. 1, Issue 9 (2026-04-06)",
+    "subspecialty": "Hip",
+    "volume": 1,
+    "issue": 9,
+    "status": "scheduled",
+    "description": "Today we explore six studies that span the breadth of hip fracture care, from risk prediction to novel pain management. We discuss a pneumonia prediction model for stroke patients, findings from Greece's new national registry, an innovative spinal block technique for palliative care, whether MRI improves core decompression outcomes, ongoing gaps in osteoporosis documentation, and the relative importance of reduction quality versus patient comorbidities in determining survival.",
+    "manuscripts": [
+      {
+        "title": "Establishment and validation of a clinical prediction model for perioperative pneumonia in elderly patients with hip fractures combined with preoperative stroke",
+        "author": "Li Y",
+        "journal": "Front Med (Lausanne)",
+        "doi": "10.1186/s40001-025-02710-4"
+      },
+      {
+        "title": "Distinct Characteristics of Patients With Fragility Hip Fracture in Greece: Evidence From the Greek National Fragility Hip Fracture Registry Utilizing the Minimum Common Data Set",
+        "author": "Iliopoulos E",
+        "journal": "Cureus",
+        "doi": "10.7759/cureus.103990"
+      },
+      {
+        "title": "PALLIHIP-study: Spinal Phenol IN Glycerol (SPING-block) in palliative, frail, older adults with a hip fracture: a study protocol",
+        "author": "Visschers N",
+        "journal": "BMC Geriatr",
+        "doi": "10.1186/s12877-026-07377-y"
+      },
+      {
+        "title": "Prognostic impact of preoperative MRI on core decompression in ARCO stage III osteonecrosis of the femoral head: a retrospective cohort study",
+        "author": "Tian YH",
+        "journal": "J Orthop Surg Res",
+        "doi": "10.1186/s13018-026-06720-8"
+      },
+      {
+        "title": "Osteoporosis documentation following hip fracture: a retrospective cohort study from a tertiary hospital",
+        "author": "Eden-Friedman Y",
+        "journal": "BMC Musculoskelet Disord",
+        "doi": "10.1186/s12891-026-09745-6"
+      },
+      {
+        "title": "Determinants of mortality following intertrochanteric fractures, comorbidities versus reduction quality: retrospective cohort study",
+        "author": "Kundakci B",
+        "journal": "J Orthop Surg Res",
+        "doi": "10.1186/s13018-026-06813-4"
+      }
+    ],
+    "manuscript_count": 6,
+    "media_url": "https://media.transistor.fm/9908655f/91365ff2.mp3",
+    "share_url": "https://share.transistor.fm/s/9908655f",
+    "duration": "14:50",
+    "published_at": "2026-04-06T10:00:00.000Z"
+  },
+  {
     "id": "3122236",
     "number": 56,
     "title": "Episode 56: Sports Medicine Edition — Vol. 1, Issue 8",
